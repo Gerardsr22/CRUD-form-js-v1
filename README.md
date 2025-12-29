@@ -11,6 +11,6 @@ Obejectius:
 
 Tecnologies usades:
 - HTML, CSS , JS vanilla -> Frontend
-- Docker
+- Docker -> Deploy al web server i segmenetar
 - Nodejs (expressjs i sqlite) -> backend
 

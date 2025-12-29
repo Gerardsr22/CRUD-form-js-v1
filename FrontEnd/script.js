@@ -23,13 +23,13 @@ form.onsubmit = async function(envio){
         "check": check
     };
 
-    console.log(dades);
+    // console.log(dades);
 
     // Usam llibreria JSON amb metode .stringify
     // per convertir l'objecte a string json
     const dadesJSON = JSON.stringify(dades)
 
-    const resposta = await fetch ('http://localhost:4999', {
+    const resposta = await fetch ('http://localhsot:4999', {
 
         method: 'POST',
         // Headers son informacio adicional per servidor
@@ -39,5 +39,29 @@ form.onsubmit = async function(envio){
         },
         body: dadesJSON
     })
+
+    // Comprobació per saber si el servidor torna la resposta
+    
+    .then(function(resposta){
+        if(!resposta.ok){
+            throw new Error(`Error:${respuesta.status}`);
+        }
+        return resposta.json();
+    })
+
+    .then (function(resposta){
+        if(resposta.ok){
+            alert("Formulari enviar correctament");
+            form.reset();
+        }
+    })
+
+    .catch(function(error){
+        console.log('Error:',error)
+        alert('Error a l\'hora d\'enviar el formulari')
+    })
+
+    const resultado = await JSON.stringify(resposta)
+    console.log(resultado)
 }
 
