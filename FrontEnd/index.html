@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari JS</title>
+    <link rel="stylesheet" href="estils.css">
+</head>
+<body>
+    <main>
+        <h2>Formulari</h2>
+        <form id="form">
+            <div class="camp">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" required>
+            </div>
+            <div class="camp">
+                <label for="llinatge">Llinatge:</label>
+                <input type="text" id="llinatge" required>
+            </div>
+            <div class="camp">
+                <label for="email">Email:</label>
+                <input type="text" id="email" required>
+            </div>
+            <div class="camp">
+                <label for="missatge">Missatge:</label>
+                <textarea id="missatge" rows="4" required></textarea>
+            </div>
+            <div id="check">
+                <label for="notificacions">T'agradaria rebre notificiacions del pròxims esdevenimemts ?</label>
+                <input type="checkbox" id="notificacions">
+            </div>
+            <button value="submit">Envia</button>    
+        </form>
+    </main>
+</body>
+</html>
+
+<script src="script.js"></script>
