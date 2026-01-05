@@ -14,3 +14,16 @@ Tecnologies usades:
 - Docker -> Deploy al web server i segmenetar
 - Nodejs (expressjs i sqlite) -> backend
 
+Index:
+
+- 1 - [Front-end](FrontEnd/README-FRONT.md)
+    - 1.1 - Formulari HTML
+    - 1.2 - Formulari JS
+        - 1.2.1 - async/await/.then
+    - 1.3 - Dockerfile
+
+- 2 - [Back-end](BackEnd/README-BACK.md)
+    - 2.1 - Nodejs 
+    - 2.2 - ExpressJS
+    - 2.3 - Cors *
+    - 2.4 - Dockerfile
