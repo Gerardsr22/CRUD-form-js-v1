@@ -29,7 +29,7 @@ form.onsubmit = async function(envio){
     // per convertir l'objecte a string json
     const dadesJSON = JSON.stringify(dades)
 
-    const resposta = await fetch ('http://localhsot:4999', {
+    const resposta = await fetch ('http://localhost:5000', {
 
         method: 'POST',
         // Headers son informacio adicional per servidor
@@ -52,6 +52,7 @@ form.onsubmit = async function(envio){
     .then (function(resposta){
         if(resposta.ok){
             alert("Formulari enviar correctament");
+            console.log(resposta.body)
             form.reset();
         }
     })

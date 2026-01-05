@@ -1,0 +1,13 @@
+
+### Post per enviar dades
+
+POST http://localhost:5000
+Content-Type: application/json
+
+{
+    "nom": "gerard",
+    "llinatge": "sanri",
+    "email": "gmail",
+    "missatge": "Hola",
+    "check": "true"
+}
