@@ -143,3 +143,9 @@ Dins el paréntesi anirà la funció que volem que s'executi damunt la Promise.
 
 **- 1.3 - Dockerfile**
 --------------------------------------------------------
+
+Al Dockerfile ja està cada linia explicada.
+
+Coses a tenir en compte:
+
+A partir del Dockerfile (del frontend)
