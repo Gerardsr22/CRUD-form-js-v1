@@ -28,8 +28,11 @@ form.onsubmit = async function(envio){
     // Usam llibreria JSON amb metode .stringify
     // per convertir l'objecte a string json
     const dadesJSON = JSON.stringify(dades)
+    // Es declara una promesa resposta, que contindrà el resultat 
+    // de l'operació del fetch.
 
-    const resposta = await fetch ('http://localhost:5000', {
+    try {
+        const resposta = await fetch ('http://localhost:5000', {
 
         method: 'POST',
         // Headers son informacio adicional per servidor
@@ -38,29 +41,20 @@ form.onsubmit = async function(envio){
             "Content-Type": "application/json"
         },
         body: dadesJSON
-    })
+        });
+    
 
     // Comprobació per saber si el servidor torna la resposta
+    if(!resposta.ok){
+        // Aquesta linia atura la funció en aquesta linia en cas de 
+        // que la condició es compleixi i bota directament al catch més proper
+        throw new Error(`Error:${resposta.status}`);
+    }
     
-    .then(function(resposta){
-        if(!resposta.ok){
-            throw new Error(`Error:${respuesta.status}`);
-        }
-        return resposta.json();
-    })
-
-    .then (function(resposta){
-        if(resposta.ok){
-            alert("Formulari enviar correctament");
-            console.log(resposta.body)
-            form.reset();
-        }
-    })
-
-    .catch(function(error){
+    } catch (error){
         console.log('Error:',error)
         alert('Error a l\'hora d\'enviar el formulari')
-    })
+    }
 
     const resultado = await JSON.stringify(resposta)
     console.log(resultado)
