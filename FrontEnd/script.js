@@ -50,13 +50,15 @@ form.onsubmit = async function(envio){
         // que la condició es compleixi i bota directament al catch més proper
         throw new Error(`Error:${resposta.status}`);
     }
+    else {
+        //Recuperam el text del boy de la resposta que torn el server
+        const resultado = await resposta.text();
+        console.log(resultado)
+    }
     
     } catch (error){
         console.log('Error:',error)
         alert('Error a l\'hora d\'enviar el formulari')
-    }
-
-    const resultado = await JSON.stringify(resposta)
-    console.log(resultado)
+    } 
 }
 
