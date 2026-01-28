@@ -12,7 +12,7 @@ let dades = []
 
 // Per poder realitzar peticions desde el propi localhost:5500 (liveserver)
 const corsOptions = {
-    origin: 'http://127.0.0.1:5500', 
+    origin: 'http://127.0.0.1:8080', 
     optionsSuccessStatus: 200
 };
 

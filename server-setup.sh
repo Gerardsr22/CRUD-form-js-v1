@@ -9,6 +9,9 @@ sleep 10
 
 cd ./CRUD-form-js-v1/FrontEnd
 
+# SET UP del Front-end
+# -----------------------------------------------------------
+
 # Crea una imatge docker del Frontend
 docker image build -t frontend-image .
 # . -> indica q es fassi el docker que està a la carpeta actual
@@ -23,5 +26,8 @@ docker run -d -p 8080:80 --network mi-red-nat --name frontend-container frontend
 # --network -> selecciona la network que usarà
 # --name -> assigna un nom a aquest contenidor
 # darrer front
+
+# SET UP del Front-end
+# -----------------------------------------------------------
 
 docker 

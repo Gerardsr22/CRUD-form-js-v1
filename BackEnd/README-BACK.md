@@ -51,8 +51,20 @@ En el nostre cas recuperam el body de la request per guardar les dades i despres
 **- 2.3 - CORS**
 ------------------------------------------------
 
+CORS és un mecanisme de seguretat dels navegadors que controla quines pàgines web poden fer peticions al teu servidor. Per defecte, els navegadors bloquegen peticions HTTP que es fan des d'un origen diferent (domini, protocol o port diferent) al del servidor.
+
+Permets que la pàgina servida des de http://127.0.0.1:8080 pugui fer peticions al teu servidor
+```optionsSuccessStatus: 200``` assegura compatibilitat amb navegadors antics que esperen un codi 200 en lloc de 204 per a peticions preflight.
+
+Recordam que en el docker del front-end, tenim el port mapejat al 8080. Això vol dir que les peticions venen del port 8080 del contenidor, es canvien al port 80 que es per on escolta el servei (nginx).
+
 
 
 **- 2.4 - Dockerfile**
 ------------------------------------------------------
 
+Al Dockerfile ja està cada linia explicada.
+
+Coses a tenir en compte:
+
+A partir del Dockerfile (del backend)
